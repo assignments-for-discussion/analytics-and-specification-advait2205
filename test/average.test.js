@@ -14,3 +14,6 @@ it('reports the average as NaN on an empty list', ()=> {
 it('ignores NaN in the input', ()=> {
   expect(average([1, NaN, 2])).to.be.approximately(1.5, 0.01);
 });
+it('Ignores the outliner values and calcualtes average ignoring them', ()=> {
+  expect(average([1, 2000, 3000, 10])).to.be.approximately(1252.75, 0.01);
+});
